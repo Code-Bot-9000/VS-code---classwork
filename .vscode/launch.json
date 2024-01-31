@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "HelloWorld",
+      "projectName": "VS-code---classwork_596a4ef7"
+    },
+    {
+      "type": "java",
       "name": "MonthlyExpenses",
       "request": "launch",
       "mainClass": "MonthlyExpenses",
