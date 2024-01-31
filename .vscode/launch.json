@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NewAge2",
+      "request": "launch",
+      "mainClass": "NewAge2",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
       "name": "HelloWorld",
       "request": "launch",
       "mainClass": "HelloWorld",
