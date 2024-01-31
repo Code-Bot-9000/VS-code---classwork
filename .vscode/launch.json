@@ -3,6 +3,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MonthlySpending",
+      "request": "launch",
+      "mainClass": "Chapter_2.MonthlySpending",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
+      "name": "Payroll",
+      "request": "launch",
+      "mainClass": "Chapter_2.Payroll",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
+      "name": "Furniture",
+      "request": "launch",
+      "mainClass": "Chapter_2.Furniture",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
+      "name": "NewAge2",
+      "request": "launch",
+      "mainClass": "Chapter_2.NewAge2",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "HelloWorld",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
+      "name": "Furniture",
+      "request": "launch",
+      "mainClass": "Furniture",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
       "name": "NewAge2",
       "request": "launch",
       "mainClass": "NewAge2",

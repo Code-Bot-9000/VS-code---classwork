@@ -1,6 +1,7 @@
 // This program calculates your age in the year 2050.
 // Input:  None.
 // Output: Your current age followed by your age in 2050.
+package Chapter_2;
 
 public class NewAge2
 {
