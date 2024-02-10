@@ -1,25 +1,24 @@
 package Chapter_3;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class CollegeAdmission {
     public static void main(String[] args) {
-        // Declare variables   
-      Scanner scanner = new Scanner(System.in);
+      // Declare variables   
       String testScoreString; //= "Enter student's test score:" ; 
 	   String classRankString; // = "Enter student's class rank: ";
 	   int testScore;
 	   int classRank; 
      
      	// Get input and convert to correct data type    
-		 System.out.print("Enter student's test score: ");
-		 testScore = scanner.nextInt();
-   
-		 System.out.print("Enter student's class rank: ");
-		  classRank = scanner.nextInt();
+      testScoreString = JOptionPane.showInputDialog("Enter student's test score:");
+      JOptionPane.showMessageDialog(null, testScoreString);
 
-		  //testScore  = Integer.parseInt(testScoreString); 
-		  //classRank = Integer.parseInt(classRankString);
+      classRankString = JOptionPane.showInputDialog("Enter student's class rank:");
+      JOptionPane.showMessageDialog(null, classRankString);
+   
+		testScore  = Integer.parseInt(testScoreString); 
+		classRank = Integer.parseInt(classRankString);
 		  
      	// Test using admission requirements and print Accept or Reject 
 		if( testScore >= 90 )
@@ -48,6 +47,5 @@ public class CollegeAdmission {
                  System.out.println("Reject");
            }
         }
-        scanner.close();
    } // End of main() method
 } // End of CollegeAdmission class
