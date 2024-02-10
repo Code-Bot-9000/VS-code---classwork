@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CollegeAdmission",
+      "request": "launch",
+      "mainClass": "Chapter_3.CollegeAdmission",
+      "projectName": "VS-code---classwork_3278a77c"
+    },
+    {
+      "type": "java",
       "name": "MonthlySpending",
       "request": "launch",
       "mainClass": "Chapter_2.MonthlySpending",
