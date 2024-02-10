@@ -3,6 +3,7 @@
   "configurations": [
     {
       "type": "java",
+<<<<<<< HEAD
       "name": "CollegeAdmission",
       "request": "launch",
       "mainClass": "Chapter_3.CollegeAdmission",
@@ -59,6 +60,8 @@
     },
     {
       "type": "java",
+=======
+>>>>>>> 11443eff3ed8d11e1bdc4ac4b0c8481a0896ec2b
       "name": "HelloWorld",
       "request": "launch",
       "mainClass": "HelloWorld",
