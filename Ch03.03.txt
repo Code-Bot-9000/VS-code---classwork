@@ -1,0 +1,101 @@
+a)
+start
+   Declarations
+      A, B, C
+   step A
+   if step B is true then
+      step C
+      step A
+   else
+      end of program
+   endif
+stop
+
+b)
+start
+   Declarations
+      D, E, F, G, H, I
+   step D
+   if step E is true then
+      step H
+      step I
+   else
+      step F
+      if step G is true then
+         step I
+      else
+      endif
+   endif
+stop
+
+c)
+start
+   Declarations
+      K, L, M, N, O, P, Q, R
+   if step L is true then
+      step P
+      while step Q is true
+         step P
+      endwhile
+      step R
+   else
+      step M
+      step N
+      if step O is true then
+         step R
+      endif
+   endif
+stop
+
+d)
+start
+   Declarations
+      S, T,U,V, W, X, Y, Z, A
+   step T
+   if step T is true then
+      step Y
+      if step Z is true then
+         step V
+      else
+         step A
+      endif
+   else
+      step U
+      step V
+      if step W is true then
+         step A
+      else
+         step X
+      endif
+   endif
+stop
+
+e)
+start
+   Declarations
+      B, C, D, E, F, G, H, I
+   if step B is true then
+      step G
+      if step H is true then
+         step D
+         while step E is true
+            step I
+	    step D
+   	 endwhile
+      step F
+      else
+         while step H is false
+            step I
+	    step G
+         endwhile
+      endif
+   else
+      step C
+      step D
+      while step E is true
+         step I
+	 step D
+      endwhile
+      step F
+   endif
+stop
