@@ -1,0 +1,28 @@
+start
+   stand up
+   aroundChair()
+    while touching something = false
+      Take a step.
+   endwhile
+   Turn right 90 degrees.
+   Turn right 90 degrees.//facing away from chair
+   aroundChair()
+   sit down
+stop
+
+aroundChair() //need to be facing away from chair
+   turn left 90 degrees
+   take a step
+   turn left 90 degrees
+   take a step
+   take a step //cross left side
+   turn left 90 degrees
+   take a step
+   take a step //cross back side
+   turn left 90 degrees
+   take a step
+   take a step //cross right side
+   turn left 90 degrees
+   take a step
+   turn right 90 degrees //facing other chair
+return
