@@ -1,0 +1,52 @@
+start
+   Declarations
+      num budget             //max money user can spend
+      num collegeCost        //how much college costs
+      num maxDistance        //max distance user wants to travel
+      num collegeDistance    //distance from college to user
+      boolean likeable       //does the user like the college?
+      boolean requirements   //does the college fulfil class requirements?
+   input budget 
+   input maxDistance
+   collegeLookup()
+   standardsLoop()
+   input likeable   ///priming input
+   input requirements   //priming input
+   while (likeable == false) || (requirements == false)
+      collegeLookup()
+      standardsLoop()
+      input likeable
+      input requirements
+      if likeable == false then
+         collegeLookup()
+         standardsLoop()
+         input likeable
+         input requirements
+      else
+         likeable == true
+      endif
+      if requirements == false then
+         collegeLookup()
+         standardsLoop()
+         input likeable
+         input requirements
+      else
+         requirements == true
+      endif
+   endwhile
+   apply for college
+stop
+
+collegeLookup()
+   go online
+   search for a new college
+   find collegeCost && collegeDistance
+return
+
+standardsLoop()
+   while (budget <= collegeCost) || (maxDistance <= collegeDistance)
+      go online
+      search for a new college
+      find collegeCost && collegeDistance
+   endwhile
+return
