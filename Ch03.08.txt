@@ -1,0 +1,34 @@
+start
+   Declarations
+      string RANDOM_WORD = "soliloquy"
+      string WORD  //word on current page
+      char correctChar //correct characters
+      char nextChar //next characters in WORD
+      num page
+   open dictionary in half
+   read from left to right
+   while WORD does not start with the same letter as RANDOM
+      if WORD < RANDOM_WORD then
+         page++
+      else
+         page--
+      endif
+   endwhile
+   while WORD =! RANDOM_WORD
+      nextLetter()
+      while nextChar =! correctChar
+         if nextChar < correctChar
+            page++
+            examine each word in page
+         else
+            page--
+	    examine each word in page
+	 endif
+      endwhile
+   endwhile	       
+stop
+
+nextLetter()
+   nextChar++
+   correctChar++
+return
