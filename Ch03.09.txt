@@ -1,0 +1,35 @@
+start
+   grab keys
+   go outside house
+   lock the house
+   walk to car
+   unlock car
+   get in car
+   put on seatbelt
+   turn on car
+   input gps destination from house to school
+   drive towards gps destination //priming input
+   while gps destination =! reached
+      keep driving //priming input
+      while car is driving
+         stay seated
+	 if stop sign = true then
+   	    stop
+  	 else
+   	    keep driving
+         endif
+	 if stop light = red || yellow
+   	    stop
+	 else
+   	    keep driving
+	 endif
+      endwhile
+   endwhiile
+   park car
+   turn off car
+   turn off gps
+   unbuckle seatbelt
+   get out of car
+   lock car
+   you are now at school
+stop
