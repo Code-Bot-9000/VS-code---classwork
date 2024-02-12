@@ -1,0 +1,40 @@
+start
+   Declarations
+      string team1, team2
+      string prompt = "let the game beggin!"
+      string winner = "you won!"
+      num score
+      num time = 60 //60 minutes
+      boolean goal
+   output prompt
+   play the game
+   while time > 0
+      keep playing the game
+      score()
+   endwhile
+   if team1 score > team2 score then
+      output winner, team1
+   else
+      output winner, team2
+   endif
+stop
+
+score()
+   if a team scores on the other team's goal, then
+      goal == true
+   else
+      goal == false
+   endif
+   if team1 goal == true then
+      team1 = score++
+      keep playing
+   else
+      if team2 goal == true then
+         team2 = score++
+         keep playing
+      else
+         keep playing
+   endif
+return
+
+//how scoring a goal affects a game in soccer
