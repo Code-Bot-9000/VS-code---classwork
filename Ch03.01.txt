@@ -1,0 +1,65 @@
+start
+   Declarations
+      string rock, paper, scissors  //player choices
+      num rockValue, paperValue, scissorsValue   //the values of the player choices converted to numbers
+      string player1, player2     //player 1 and player 2
+      string prompt = "rock, paper, scissors shoot!"
+      string winner = "you win!"
+      string loser = "you lose!"
+   output prompt
+   input player1.random() && player2.random()
+   if ((player1 = rock) && (player2 = paper)) || ((player2 = rock) && (player1 = paper)) then
+      convertToNumbers()
+      winnerLoser()
+   else
+      if ((player1 = scissors) && (player2 = rock)) || ((player2 = scissors) && (player1 = rock)) then
+         convertToNumbers()
+	 winnerLoser()
+      else
+         if ((player1 = paper) && (player2 = scissors)) || ((player2 = paper) && (player1 = scissors)) then
+            convertToNumbers()
+            winnerLoser()
+   endif
+stop
+
+
+
+random()
+   returns rock, paper, or scissors at random
+return
+
+convertToNumbers()
+   if rock && paper then
+      rockValue = rock = 1
+      paperValue = paper = 2
+   else
+      if paper && scissors then
+         paperValue = paper = 1
+         scissorsValue = scissors = 2
+      else
+         if scissors && rock then
+            scissorsValue = scissors = 1
+            rockValue = rock = 2
+   endif
+return
+   
+winnerLoser()
+   if player1 > player2 then 
+      output player1, winner
+      output player2, loser
+   else
+      output player2, winner
+      output player1, loser
+   endif
+return
+
+/*
+rock < paper
+paper < scissors
+scissors < rock
+*/
+/*
+-rock = 1 paper = 2  
+scissors = 1 rock = 2
+paper = 1 scissors = 2
+*/
