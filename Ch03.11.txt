@@ -1,0 +1,55 @@
+start
+   Declarations
+      num budget         //what is your budjet?
+      char yourSize      //your size
+      num cost           //shirt cost
+      char shirtSize     //shirt size
+      boolean likeable   //do you like it?
+   input yourSize
+   input budget
+   shirtSearch() //priming input
+   while (cost > budget) || (shirtSize > yourSize)
+      shirtSearch()
+   endwhile
+   pay()
+stop
+
+shirtSearch()
+   search for new shirt
+   input likeable
+   if likeable == true then
+      determine cost && shirtSize
+   else
+      while likeable == false
+         search for new shirt
+         input likeable
+         if likeable == true then
+            determine cost && shirtSize
+         else
+            likeable == false
+         endif
+      endwhile
+   endif
+return
+      
+pay()
+   pay at the register
+   if cost =! budget then
+      take your change
+      take your shirt
+      leave
+   else
+      take your shirt
+      leave
+   endif
+return
+
+
+
+/*
+does it fit?
+do you like it?
+does it fit within your budget? loop?
+search loop?
+pay if statement?
+*/

@@ -1,0 +1,83 @@
+start
+   Declarations
+      num ROWS = 5
+      num rowPick    //row number picked by contestants
+      difficulty = 5
+      num time = 30  //30seconds
+      num prize, wager
+      string team1, team2, team3
+      string answer    //read by host
+      boolean question //true = right, false = wrong //answered by contestants
+      boolean finalJeopardy
+   output answer
+      if buzzer is hit first by team1 then
+         team1 picks category and answer
+         category()
+      else
+         if buzzer is hit first by team2 then
+            team2 picks category and answer
+            category()
+         else
+            team3 picks caegory and answer
+            category()
+      endif
+   points()
+   wrongAnswer()
+   while finalJeopardy =! true
+      output answer
+      points()
+      wrongAnswer()
+   endwhile
+   if finalJeopardy == true then
+      team1, team2, team3 input wager
+      output answer
+      points()
+      wrongAnswer()
+   else
+      end of game
+   endif
+stop
+
+points()
+   if time = 0 then
+      points = points - prize
+   else
+      if question == true then
+         points = points + prize
+      else
+         points = points - prize
+   endif
+return
+
+category() 
+   if rowPick < ROWS then   //lower rowPick = higher prizes and difficulty
+      ++difficulty
+      ++prize
+   else                     //higher rowPick = lower prizes and less difficulty
+      --difficulty
+      --prize
+   endif
+return
+
+wrongAnswer()
+   if question == false
+      next team can answer
+   else
+      your turn
+   endif
+return
+
+/*
+-6 categories as you go down the column the questions get harder, and higher prize
+-TV host gives you the answer to the category and the contestant has to answer in a question
+-after the host reads the answer, whoever hit the buzzer first gets to answer
+
+-if answer == right, you win the price amount for that category
+-if answer == wrong, you lose the amount for that category and the next team can answer
+-if there is no response within the time limit, answer == wrong and the next team can answer
+-if both contestants are wrong, host reveals the answer and whoever was last correct can choose the next answer
+
+-Final jeapordy is announced by the host, both teams will decide the amount wagered $0+
+-Both teams answer on paper by asking a question
+-if answer == wrong, points = points - amountWagered
+*/

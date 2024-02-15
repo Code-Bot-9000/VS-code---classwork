@@ -1,0 +1,23 @@
+start
+   Declarations
+      num guess
+      num CORRECT_NUM = 42
+      string prompt = "guess a number between 1 and 100"
+      string LINE1 = "your guess is too high
+      string LINE2 = "your guess is low
+      string LINE3 = "your guess is correct"
+   output prompt
+   input guess //priming input
+      while guess =! CORRECT_NUM 
+         if guess < CORRECT_NUM 
+            output LINE2
+	    output prompt
+	    input guess
+	 else
+	    output LINE1
+	    output prompt
+	    input guess
+	 endif
+      endwhile
+   output LINE3
+stop

@@ -1,0 +1,120 @@
+a)
+start
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+stop
+
+b)
+start
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+stop
+
+c)
+start
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+stop
+
+d)
+start
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper.
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper.
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+stop
+
+e)
+start
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Turn 90 degrees to the right.
+   Raise the pen from the paper.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Turn 90 degrees to the right.
+   Move the pen one inch along a straight line. The line is drawn in the direction the pen is facing. (If the pen is lowered, this action draws a one-inch line; if the pen is raised, this action just repositions the pen one inch.)
+   Lower the pen to the piece of paper. The first time the pen is lowered, it is facing right and ready to move to the right.
+   Draw a circle that is one inch in diameter. The circle is drawn clockwise from the starting point.
+stop

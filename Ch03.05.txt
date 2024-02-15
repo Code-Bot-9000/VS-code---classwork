@@ -1,0 +1,9 @@
+start
+   Stand up.
+   while touching something = false
+      Take a step.
+   endwhile
+   Turn right 90 degrees.
+   Turn right 90 degrees.
+   Sit down.
+stop
