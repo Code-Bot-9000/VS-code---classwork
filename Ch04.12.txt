@@ -1,0 +1,30 @@
+start
+   Declarations
+      string idNum, itemDescription
+      num lengthDays, bid
+      num maxBid
+      string maxBidPrompt = "Enter a max required bid >> "
+      string idPrompt = "Enter your ID number >> "
+      string itemPrompt = "Enter an item description >> "
+      string daysPrompt = "Enter the length of auction in days >> "
+      string bidPrompt = "Enter a bid >> "
+   output maxBidPrompt
+   input maxBid
+   prompt()
+   while(bid <= maxBid)
+      output idNum, itemDescription
+      output lengthDays, bid
+      prompt()
+   endwhile
+stop
+
+prompt()
+   output idPrompt
+   input idNum
+   output itemPrompt
+   input itemDescription
+   output daysPrompt
+   input lengthDays
+   output bidPrompt
+   input bid
+return
