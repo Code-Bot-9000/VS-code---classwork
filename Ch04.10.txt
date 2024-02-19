@@ -1,0 +1,28 @@
+start
+   Declarations
+      string idNum, itemDescription
+      num lengthDays, bid
+      string idPrompt = "Enter your ID number or EXIT to exit >> "
+      string itemPrompt = "Enter an item description >> "
+      string daysPrompt = "Enter the length of auction in days >> "
+      string bidPrompt = "Enter a bid >> " 
+      string exit = "EXIT"
+      num MIN_BID = 0.00
+   prompt()
+   while(bid == MIN_BID && lengthDays <= 7)
+      output idNum, itemDescription
+      output lengthDays, bid
+      prompt()
+   endwhile
+stop
+
+prompt()
+   output idPrompt
+   input idNum
+   output itemPrompt
+   input itemDescription
+   output daysPrompt
+   input lengthDays
+   output bidPrompt
+   input bid
+return
