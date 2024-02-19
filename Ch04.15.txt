@@ -1,3 +1,5 @@
+start
+   Declarations
       string areaCode
       string phoneNumber
       num messagesSent
