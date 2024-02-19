@@ -19,7 +19,7 @@ start
       num ADDITIONAL_CHARGES_2 = 0.02
       num TAXES = 0.14
       num charges
-      num monthlyBill = charges * TAXES
+      num monthlyBill = charges + (charges * TAXES)
    prompt()
    if(messagesSent > MESSAGES_INCLUDED && messagesSent <= 300) then
       charges = (additionalMessages * ADDITIONAL_CHARGES_1) + BASIC_RATE
