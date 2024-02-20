@@ -1,0 +1,24 @@
+start
+   Declarations
+      string name, town
+      string candidateTown1 = "Wonder Lake"
+      string candidateTown2 = "Woodstock"
+      string namePrompt = "Enter your name or EXIT to exit >> "
+      string townPrompt = "Enter the town you live in >> "
+      string candidate = "You are a candidate!"
+      string sentinelValue = "EXIT"
+   prompt()
+   while(name != sentinelValue)
+      if(town = candidateTown1 || town = candidateTown2) then
+         output candidate
+      endif
+      prompt()
+   endwhile
+stop
+
+prompt()
+   output namePrompt
+   input name
+   output townPrompt
+   input town
+return
