@@ -1,0 +1,20 @@
+start
+   Declarations
+      string name, town
+      string candidateTown1 = "Wonder Lake"
+      string candidateTown2 = "Woodstock"
+      string namePrompt = "Enter your name >> "
+      string townPrompt = "Enter the town you live in >> "
+      string candidate = "You are a candidate!"
+   prompt()
+   if(town = candidateTown1 || town = candidateTown2) then
+      output candidate
+   endif
+stop
+
+prompt()
+   output namePrompt
+   input name
+   output townPrompt
+   input town
+return
