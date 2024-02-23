@@ -10,7 +10,7 @@ public class EmployeeBonus2{
 		double employeeSalary;	
 		String ratingString;
 		int employeeRating; 
-		double employeeBonus;
+		double employeeBonus = 0;
 		final double BONUS_1 = .25;
 		final double BONUS_2 = .15;
 		final double BONUS_3 = .10; 
@@ -29,7 +29,18 @@ public class EmployeeBonus2{
 		employeeRating = Integer.parseInt(ratingString);
 		
 		// Use switch statement here to calculate bonus based on rating.
-		
+        
+        switch(employeeRating){
+            case RATING_1: employeeBonus = BONUS_1 * employeeSalary;
+            break;
+            case RATING_2: employeeBonus = BONUS_2 * employeeSalary;
+            break;
+            case RATING_3: employeeBonus = BONUS_3 * employeeSalary;
+            break;
+
+            default: employeeBonus = NO_BONUS;
+        }
+
 		// Output.  
 		System.out.println("Employee Name: " + employeeName);
 		System.out.println("Employee Salary: $" + employeeSalary);
@@ -37,3 +48,11 @@ public class EmployeeBonus2{
 		System.out.println("Employee Bonus: $" + employeeBonus);
 	}
 }
+
+/* 
+Rating	Bonus
+1	25 percent of annual salary
+2	15 percent of annual salary
+3	10 percent of annual salary
+4	None
+ */
