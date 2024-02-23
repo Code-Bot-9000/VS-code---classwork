@@ -1,0 +1,130 @@
+start
+   Declarations
+      num policyNum, age, accidents
+      num month 
+      num day 
+      num year
+      num januaryDays = 31
+      num februaryDays = 29
+      num marchDays = 31
+      num aprilDays = 30
+      num mayDays = 31
+      num juneDays = 30
+      num julyDays = 31
+      num augustDays = 31
+      num septemberDays = 30
+      num octoberDays = 31
+      num novemberDays = 30
+      num decemberDays = 31
+      num minPolicyNum = 1000
+      num maxPolicyNum = 9999
+      string firstName, lastName
+      string policuNumPrompt = "Enter your policy number or type 1 to exit >> "
+      string lastNamePrompt = "Enter your last name >> "
+      string firstNamePrompt "Enter your first name >> "
+      string agePrompt = "Enter your age >> "
+      string dueDatePrompt = "Enter your premium due date(mm,dd,yyyy) >> "
+      string accidentPrompt = "Enter the amount of accidents you've had in the past three years"
+   prompt()
+   while(policyNum != 1)
+      prompt()
+      if(age <= 18) then
+         output firstName, lastName
+         output policyNum, age, accidents
+         output month, day, year
+      endif
+   endwhile
+stop
+
+prompt()
+   output policuNumPrompt
+   input policyNum
+   if(policyNum < minPolicyNum || policyNum > maxPolicyNum) then
+      policyNum = 0
+   endif
+   output lastNamePrompt
+   input lastName
+   output firstNamePrompt
+   input firstName
+   output agePrompt
+   input age
+   output accidentPrompt
+   input accidents
+   output dueDatePrompt
+   input month, day, year
+   if(month < 1 || month > 12) then
+      month = 0
+      day = 0
+      year = 0
+   endif
+   if(month == 1 && day < 1 || day > januaryDays) then
+      month = 0
+      day = 0
+      year = 0
+   else
+      if(month == 2 && day < 1 || day > februaryDays) then
+         month = 0
+         day = 0
+         year = 0
+      else
+         if(month == 3 && day < 1 || day > marchDays) then
+            month = 0
+            day = 0
+            year = 0
+         else
+            if(month == 4 && day < 1 || day > aprilDays) then
+              month = 0
+              day = 0
+              year = 0
+            else
+              if(month == 5 && day < 1 || day > mayDays) then
+                 month = 0
+                 day = 0
+                 year = 0
+              else
+                 if(month == 6 && day < 1 || day > juneDays) then
+                    month = 0
+                    day = 0
+                    year = 0
+                 else
+                    if(month == 7 && day < 1 || day > julyDays) then
+                       month = 0
+                       day = 0
+                       year = 0
+                    else
+                       if(month == 8 && day < 1 || day > augustDays) then
+                          month = 0
+                          day = 0
+                          year = 0
+                       else
+                          if(month == 9 && day < 1 || day > septemberDays) then
+                             month = 0
+                             day = 0
+                             year = 0
+                          else 
+                             if(month == 10 && day < 1 || day > octoberDays) then
+                                month = 0
+                                day = 0
+                                year = 0
+                             else
+                                if(month == 11 && day < 1 || day > novemberDays) then
+                                   month = 0
+                                   day = 0
+                                   year = 0
+                                else
+                                   if(month == 12 && day < 1 || day > decemberDays) then
+                                      month = 0
+                                      day = 0
+                                      year = 0
+                                   endif
+                                endif
+                             endif
+                          endif
+                       endif
+                    endif
+                 endif
+              endif
+           endif
+      endif
+   endif
+return

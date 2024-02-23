@@ -1,0 +1,61 @@
+start
+   Declarations
+      num guess1, guess2, guess3
+      num random1 = random(limit) 
+      num random2 = random(limit) 
+      num random3 = random(limit)
+      num count = 0
+      num MAX = 9 
+      num MIN = 0
+      num award
+      string prompt = "Guess 3 numbers between 0 and 9"
+      string outOfBounds = "Error. Enter 3 numbers between 0 and 9"
+   output prompt
+   input guess1
+   input guess2
+   input guess3
+   while(guess1 > MAX || guess2 > MAX || guess3 > MAX || guess1 < MIN || guess2 < MIN || guess3 < MIN)
+      output outOfBounds
+      input guess1
+      input guess2
+      input guess3
+   endwhile
+   if(guess1 == random1||guess2 == random1||guess3 == random1)then
+      count = count + 1
+      else 
+      count = count + 0
+   endif
+   if(guess1 == random2||guess2 == random2||guess3 == random2)then
+      count = count + 1
+      else 
+      count = count + 0
+   endif
+   if(guess1 == random3||guess2 == random3||guess3 == random3)then
+      count = count + 1
+      else 
+      count = count + 0
+   endif
+   if(count == 3)then
+      award = 1000
+   else
+      if(count == 2)then
+         award = 100
+      else
+         if(count == 1)then
+           award = 10
+         else
+           award = 0
+         endif
+      endif
+   endif
+   if(guess1 == random1 && guess2 == random2 && guess3 == random3)then
+      award = 1000000
+   endif
+   output award
+   output guess1, guess2, guess3
+   output random1, random2, random3
+stop
+
+random() //generates a random number between the limit specified
+   limit(0 - 9)
+return

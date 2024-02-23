@@ -1,0 +1,15 @@
+start
+   Declarations
+      num num1, num2, num3
+      num sum = num1 + num2
+      string prompt = "enter three numbers"
+      string equal = num1 +" plus "+ num2 +" = "+ num3
+      string notEqual = num1 +" plus "+ num2 +" do not equal "+ num3
+   output prompt
+   input num1, num2, num3
+   if(sum == num3)then
+      output equal
+   else
+      output notEqual
+   endif
+stop

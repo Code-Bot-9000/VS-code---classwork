@@ -1,0 +1,44 @@
+start
+   Declarations
+      num idNum, age, weight, bill
+      string name, breed
+      num smallWeight = 15 //15lbs or less 
+      num mediumWeight = 30 //between 15 lbs and 30 lbs
+      num largeWeight = 80 //between 31 lbs and 80 lbs
+      num smallFee = 55
+      num mediumFee = 75
+      num = largeFee = 105
+      num = xLargeFee = 125
+      string idPrompt = "Enter the owner's ID number >> "
+      string namePrompt = "Enter the dog's name >> "
+      string breedPrompt = "Enter the breed of the dog >> "
+      string agePrompt = "Enter the dog's age >> "
+      string weightPrompt = "Enter the weight of the dog >> "
+   prompt()
+   if(weight <= smallWeight) then //bill for small dog
+      bill = smallFee
+   else
+      if(weight >= smallWeight && weight <= mediumWeight) then    //bill for medium weight
+         bill = mediumFee
+      else
+         if(weight > mediumWeight && weight <= largeWeight) then    //bill for large dog
+            bill = largeFee
+         else
+            bill = xLargeFee  //bill for XL dog
+         endif
+      endif
+   endif
+stop
+
+prompt()
+   output idPrompt
+   input idNum
+   output namePrompt
+   input name
+   output breedPrompt
+   input breed
+   output agePrompt
+   input age
+   output weightPrompt
+   input weight
+return

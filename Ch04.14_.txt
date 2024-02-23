@@ -1,0 +1,60 @@
+//A program that continually accepts data about text messages until a sentinel value is entered and displays all the details.
+//---Answer in prompt() module---
+
+start
+   Declarations
+      string areaCode
+      string phoneNumber
+      num messagesSent
+      num beforeTax, afterTax
+      string areaCodePrompt = "Enter an area code >> "
+      string phonePrompt = "Enter a phone number >> "
+      string messagesPrompt = "Enter the number of messages sent >> "
+      string confirmPrompt = "Enter 0 to confirm and continue >> "
+      string confirmValue = 1
+      num BASIC_RATE = 5
+      num MESSAGES_INCLUDED = 100
+      num additionalMessages = messagesSent - MESSAGES_INCLUDED
+      num ADDITIONAL_CHARGES_1 = 0.03
+      num ADDITIONAL_CHARGES_2 = 0.02
+      num TAXES = 0.14
+      num charges
+      num monthlyBill = charges + (charges * TAXES)
+   prompt()
+   if(messagesSent > MESSAGES_INCLUDED && messagesSent <= 300) then
+      charges = (additionalMessages * ADDITIONAL_CHARGES_1) + BASIC_RATE
+   else
+      if(messagesSent > 300) then
+         charges = (additionalMessages * ADDITIONAL_CHARGES_2) + BASIC_RATE
+      else
+         charges = BASIC_RATE
+      endif
+   endif
+   output areaCode, phoneNumber, messagesSent
+   output charges
+   output monthlyBill
+stop
+
+prompt()
+   output areaCodePrompt
+   input areaCode
+   while(stringlength(areaCode) != 3)
+      input areaCode
+   endwhile
+   output phonePrompt
+   input phoneNumber
+   while(stringlength(phoneNumber) != 7)
+      input phoneNumber
+   endwhile
+   output messagesPrompt
+   input messagesSent
+   while(confirmValue != 0)
+      input messagesSent
+      output confirmPrompt
+      input confirmValue
+   endwhile
+return
+
+stringLength(string) //counts the number of characters in a string
+   stringInput = stringLength
+return

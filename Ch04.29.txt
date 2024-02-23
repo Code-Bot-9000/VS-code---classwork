@@ -1,0 +1,56 @@
+start
+   Declarations
+      num idNum, age, weight, bill
+      string name, breed
+      num smallWeight = 15 //15lbs or less 
+      num mediumWeight = 30 //between 15 lbs and 30 lbs
+      num largeWeight = 80 //between 31 lbs and 80 lbs
+      num smallFee = 55
+      num mediumFee = 75
+      num = largeFee = 105
+      num = xLargeFee = 125
+      string idPrompt = "Enter the owner's ID number or 0 to exit >> "
+      string namePrompt = "Enter the dog's name >> "
+      string breedPrompt = "Enter the breed of the dog >> "
+      string agePrompt = "Enter the dog's age >> "
+      string weightPrompt = "Enter the weight of the dog >> "
+      num sentinelValue = 0
+   prompt()
+   while(idNum != sentinelValue)
+      if(weight < 20 || weight > 100) then
+         output name, breed, age, weight
+         output bill
+      endif
+      prompt()
+      charges()
+   endwhile
+stop
+
+prompt()  //prompts the user for information
+   output idPrompt
+   input idNum
+   output namePrompt
+   input name
+   output breedPrompt
+   input breed
+   output agePrompt
+   input age
+   output weightPrompt
+   input weight
+return
+
+charges()  //billing for different weight dogs
+   if(weight <= smallWeight) then //bill for small dog
+      bill = smallFee
+   else
+      if(weight >= smallWeight && weight <= mediumWeight) then    //bill for medium weight
+         bill = mediumFee
+      else
+         if(weight > mediumWeight && weight <= largeWeight) then    //bill for large dog
+            bill = largeFee
+         else
+            bill = xLargeFee  //bill for XL dog
+         endif
+      endif
+   endif
+return

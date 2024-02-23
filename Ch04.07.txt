@@ -1,0 +1,25 @@
+start
+   Declarations
+      num idNum, itemsSold, itemValue
+      num LOW_VALUE = 50
+      num HIGH_VALUE = 100
+      string promptID = "Enter an ID number, or EXIT to finish"
+      string promptSold = "Enter the number of items sold in the last month"
+      string promptValue = "Enter the value of the iterms sold in the last month"
+   prompt()
+   while(idNum != "EXIT")
+      prompt()
+      if(itemsSold >= LOW_VALUE && itemsSold <= HIGH_VALUE)then
+         output idNum, itemsSold, itemValue
+      endif
+   endwhile
+stop
+
+prompt()
+   output promptID
+   input idNum
+   output promptSold
+   input itemsSold
+   output promptValue
+   input itemValue
+return

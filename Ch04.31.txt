@@ -1,0 +1,45 @@
+start
+   Declarations
+      num orderNum, chars
+      string name, woodType, color
+      num minCharge = 30
+      num bill = minCharge
+      num oakCharge = 15
+      num includedChars = 6
+      num goldCharges = 12
+      string orderPrompt = "Enter an order number or 0 to exit >> "
+      string namePrompt = "Enter your name >> "
+      string woodPrompt = "Enter the wood type you'd like >> "
+      string numCharPrompt = "Enter the number of characters in your sign >> "
+      string colorPrompt = "Enter the color of the characters >> "
+      num sentinelValue = 0
+   prompt()
+   while(orderNum != sentinelValue)
+   if(woodType = "oak") then
+      bill = bill + oarkCharge
+   endif
+   if(chars > includedChars) then
+      bill = bill + (3 * (chars - includedChars))
+   endif
+   if(color = "gold-leaf") then
+      bill = bill + 12
+   endif
+   if(woodType = "oak" && chars == 5)
+      output orderNum, name, woodType, chars, color
+      output bill
+      endwhile
+   endif
+stop
+
+prompt()
+   output orderPrompt
+   input orderNum
+   output namePrompt
+   input name
+   output woodPrompt
+   input woodType
+   output numCharPrompt
+   input chars
+   output colorPrompt
+   input color
+return

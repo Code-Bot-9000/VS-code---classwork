@@ -1,0 +1,19 @@
+start
+   Declarations
+      num idNum, itemsSold, itemValue
+      num HIGH_VALUE = 200
+      string highPerformer = "You are a high performer!"
+      string promptID = "Enter your ID number"
+      string promptSold = "Enter the number of items sold in the last month"
+      string promptValue = "Enter the value of the iterms sold in the last month"
+   output promptID
+   input idNum
+   output promptSold
+   input itemsSold
+   output promptValue
+   input itemValue
+   if(itemsSold > HIGH_VALUE && itemValue >= 1000)then
+      output idNum, itemsSold, itemValue
+      output highPerformer
+   endif
+stop
