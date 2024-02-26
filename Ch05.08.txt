@@ -9,7 +9,6 @@ start
    lowNum = numInput
    highNum = numInput
    while(numInput >= 0)
-      input = numInput
       if(lowNum > numInput) then
          lowNum = numInput
       endif
@@ -17,5 +16,6 @@ start
          highNum = numInput
       endif
       output prompt
+      input = numInput
    endwhile
 stop
