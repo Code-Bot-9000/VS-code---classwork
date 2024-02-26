@@ -38,5 +38,4 @@ start
       averageStars = totalStars/numPatrons
       output averageStars
    endif
-   
 stop
