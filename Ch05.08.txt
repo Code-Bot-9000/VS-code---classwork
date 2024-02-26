@@ -1,0 +1,21 @@
+start
+   Declarations
+      num numInput
+      num highNum, lowNum
+      num temp = 0
+      string prompt = "Enter a number or a negative number to exit >> "
+   output prompt
+   input numInput
+   lowNum = numInput
+   highNum = numInput
+   while(numInput >= 0)
+      input = numInput
+      if(lowNum > numInput) then
+         lowNum = numInput
+      endif
+      if(highNum > numInput) then
+         highNum = numInput
+      endif
+      output prompt
+   endwhile
+stop
