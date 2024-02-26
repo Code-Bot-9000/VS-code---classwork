@@ -1,0 +1,85 @@
+start
+   Description
+      string zipCode 
+      string shopZip = "54984"
+      num shopItems = 0
+      num otherItems = 0
+      num itemsOrdered = 0
+      num age
+      num ageSum = 0
+      num averageAge
+      num underFourFive
+      num aboveFourFive
+      num customerCount = 0
+      num totalItems = 0
+      num repromptItems = 0
+      num LOW_VALUE = 1
+      num HIGH_VALUE = 10
+      string zipCodePrompt = "Enter your zip code or "o" to EXIT >> "
+      string agePrompt = "Enter your age >> "
+      string itemPrompt = "Enter the number of items ordered >> "
+      string itemError = "ERROR. You order will not be counted."
+   ageAndZipPrompt()
+   while(zipCode != "o")
+      while(zipCode.length() > 4 || age < 10 || age > 110) /*max is 5 digits for zip code, but 
+                                                             length() module starts counting at 0 */
+         ageAndZipPrompt()   //when valid age and zip is entered, exit nested loop
+      endwhile
+      customerCount++ //keeps track of the customer count for average age
+      ageSum = ageSum + age
+      if(age < 45) then
+         underFourFive++
+      endif
+      if(age >= 45) then
+         aboveFourFive++
+      endif
+      itemModule()   //promps for items for this run
+
+      if(zipCode == shopZip) then  //items bought on coffee shop zip code
+         shopItems = shopItems + totalItems
+      else
+         otherItems = otherItems + totalItems  //items bought on other zip codes
+      endif
+      totalItems = 0   //resets to 0 after each different zip code    
+   endwhile
+   averageAge = ageSum/customerCount
+   output shopItems
+   output otherItems
+   output averageAge
+   output underFourFive
+   output aboveFourFive
+stop
+
+
+itemModule()
+   output itemPrompt    //item prompt starts here
+   input itemsOrdered
+   if(itemsOrdered >= LOW_VALUE && itemsOrdered <= HIGH_VALUE) then   //correct input
+      totalItems = totalItems + itemsOrdered
+   endif
+   while(itemsOrdered < LOW_VALUE || itemsOrdered > HIGH_VALUE && repromptItems < 3) //incorrect input
+      repromptItems++
+      output itemPrompt
+      input itemsOrdered
+   endwhile
+
+   if(repromptItems >= 3 && itemsOrdered > HIGH_VALUE) then
+      totalItems = totalItems + itemsOrdered
+   else
+      if(repromptItems >= 3 && itemsOrdered < LOW_VALUE) then
+         output itemError
+      endif
+   endif
+return
+
+
+ageAndZipPrompt()
+   output zipCodePrompt
+   input zipCode
+   output agePrompt
+   input age
+return
+
+
+length() //returns the length of a string //starts at 0
+return
