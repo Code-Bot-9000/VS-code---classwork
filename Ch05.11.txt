@@ -1,0 +1,15 @@
+start
+   Declarations
+      num tuition = 20000
+      num interests = 0.03
+      num count
+   output tuition
+   for count = 1 to 10 step 1
+      year()
+      tuition = tuition + tuition * (interests)
+      output tuition
+   endfor
+stop
+
+year() //keeps track of every passing year
+return
