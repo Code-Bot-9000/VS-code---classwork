@@ -12,7 +12,7 @@ start
       if(lowNum > numInput) then
          lowNum = numInput
       endif
-      if(highNum > numInput) then
+      if(highNum < numInput) then
          highNum = numInput
       endif
       output prompt
