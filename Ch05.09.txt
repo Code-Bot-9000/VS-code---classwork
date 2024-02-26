@@ -10,6 +10,7 @@ start
    while(loan > 0)
       monthlyBalance(30 days)
       payment()
+      loan = loan - payment
    endwhile
 stop
 
