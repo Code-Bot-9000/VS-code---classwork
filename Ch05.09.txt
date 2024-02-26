@@ -1,0 +1,24 @@
+start
+   Declarations
+      num loan, payment
+      string loanPrompt = "Enter the amount for your loan >> "
+      string paymentPrompt = "Enter the amount you'd like to pay >> "
+   output loanPrompt
+   input loan
+   payment()
+   loan = loan - payment
+   while(loan > 0)
+      monthlyBalance(30 days)
+      payment()
+   endwhile
+stop
+
+payment()
+   output paymentPrompt
+   input payment
+return
+
+monthlyBalance() //Outputs the customer's balance each month
+   month(30days)
+   output loan
+return
