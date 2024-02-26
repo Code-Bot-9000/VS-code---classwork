@@ -1,0 +1,33 @@
+start
+   Declarations
+      num numStars
+      num averageStars
+      num totalStars
+      num total stars = 0
+      num numPatrons = 0
+      string numStarsPrmopt = "Enter a star rating from 0 to 4"
+   output numStarsPrompt
+   input numStars
+   if(numStars >= 0 && numStars <=4) then
+      totalStars = totalStars + numStars
+      numPatrons++
+   else
+      while(numStars < 0 || numStars > 4)
+         output numStarsPrompt
+         input numStars
+      endwhile
+   endif
+   while(numStars >= 0)
+      if(numStars >= 0 && numStars <=4) then
+         totalStars = totalStars + numStars
+         numPatrons++
+      else
+         while(numStars > 4)
+            output numStarsPrompt
+            input numStars
+         endwhile
+      endif
+   endwhile
+   averageStars = totalStars/numPatrons
+   output averageStars
+stop
