@@ -1,0 +1,20 @@
+start
+   Declarations
+      num tuition = 20000
+      num interests
+      num fixedInterests = 0.05
+      num count
+      string interestPrompt = "Enter the rate of tuition increase for the first year >> "
+   output tuition
+   output interestPrompt
+   input interests
+   for count = 1 to 10 step 1
+      year()
+      tuition = tuition + tuition * (interests)
+      output tuition
+      interests = fixedInterests
+   endfor
+stop
+
+year() //keeps track of every passing year
+returnS
