@@ -1,0 +1,41 @@
+start
+   Declarations
+      num numStars
+      num averageStars
+      num totalStars
+      num total stars = 0
+      num numPatrons = 0
+      num invalid = 0
+      string numStarsPrmopt = "Enter a star rating from 0 to 4"
+      string invalidPrompt = "You have reached the maximum amount of invalid entries..."
+   output numStarsPrompt
+   input numStars
+   if(numStars >= 0 && numStars <=4) then
+      totalStars = totalStars + numStars
+      numPatrons++
+   else
+      while(numStars < 0 || numStars > 4 && invalid < 3)  //initial invalid input loop
+         output numStarsPrompt
+         input numStars
+         invalid++
+      endwhile
+   endif
+   while(numStars >= 0 && invalid < 3)  //continues to ask for input until a number less than zero is entered and while less than 3 invalid input
+      if(numStars >= 0 && numStars <=4) then
+         totalStars = totalStars + numStars
+         numPatrons++
+      else
+         while(numStars > 4)   //invalid input loop
+            output numStarsPrompt
+            input numStars
+            invalid++
+         endwhile
+      endif
+   endwhile
+   if(invalid == 3) then
+      output invalidPrompt
+   else
+      averageStars = totalStars/numPatrons
+      output averageStars
+   endif
+stop

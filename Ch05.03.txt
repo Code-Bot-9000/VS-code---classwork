@@ -1,0 +1,85 @@
+start
+   Declarations
+      num dice1 = random(1,6)
+      num dice2 = random(1,6)
+      num randomValue = random(1,2)
+      num WIN_TOTAL = 100
+      num turnTotal
+      num accumulatedTotal = 0
+      num player = 0
+      num computer = 0
+      string playerWin = "Player wins!"
+      string compWin = "Computer wins!"
+      string promptPlayer = "Roll the dice player!"
+      string promptComputer = "Roll the dice computer!"
+      string reRollOption = "Would you like to roll again? Y or N"
+      char answer //input from the user Y or N
+   output promptPlayer
+   dice1,dice2
+   while(player != WIN_TOTAL || computer != WIN_TOTAL)
+      playerTurn()
+      computerTurn()
+   endwhile
+   if(player == WIN_TOTAL) then
+      output playerWin
+   else
+      output compWin
+   endif
+stop
+
+random() //returns a random number within a limit
+   random(1,6)
+return
+
+playerTurn()
+   while(dice1 != 1 && dice2 != 1)
+      turnTotal = dice1 + dice2
+      accumulatedTotal = accumulatedTotal + turnTotal
+      output reRollOption
+      input answer
+      if(answer == 'Y') then
+         dice1,dice2
+      else
+         break;   //exits out of the while loop
+      endif
+   if(dice1 == 1 && dice 2 == 1) then   //exits because of 1
+      turnTotal = 0
+      accumulatedTotal = 0
+   endif
+   if(dice1 == 1 || dice 2 == 1) then     //exits because of 1
+      turnTotal = 0
+   endif
+   endwhile
+   player = player + accumulatedTotal
+   accumulatedTotal = 0 
+   turnTotal = 0
+return
+
+computerTurn()
+   while(dice1 != 1 && dice2 != 1)
+      turnTotal = dice1 + dice2
+      accumulatedTotal = accumulatedTotal + turnTotal
+      output reRollOption
+      output randomValue
+      if(randomValue == 1) then
+         answer = 'Y'
+      else
+         answer = 'N'
+      endif
+      if(answer == 'Y') then
+         dice1,dice2
+      else
+         break;   //exits out of the while loop
+      endif
+   if(dice1 == 1 && dice 2 == 1) then   //exits because of 1
+      turnTotal = 0
+      accumulatedTotal = 0
+   endif
+   if(dice1 == 1 || dice 2 == 1) then     //exits because of 1
+      turnTotal = 0
+   endif
+   endwhile
+   computer = computer + accumulatedTotal
+   accumulatedTotal = 0 
+   turnTotal = 0
+return
