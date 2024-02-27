@@ -27,11 +27,15 @@ public class MovieGuide
 		numPatrons++;
 	}
 		// Write while loop here	
-		while(numStars >= 0 && numStars <= 4){
+		while(numStars >= 0){
 			numStars = Double.parseDouble(JOptionPane.showInputDialog("Enter a star rating from 0 to 4"));
-			if(numStars >= 0){
+			if(numStars >= 0 && numStars <= 4){
 				totalStars += numStars;
 				numPatrons++;
+			}
+			else
+			while(numStars > 4){
+				numStars = Double.parseDouble(JOptionPane.showInputDialog("Enter a star rating from 0 to 4"));
 			}
 		}	
 		// Calculate average star rating
