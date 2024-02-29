@@ -1,0 +1,51 @@
+start
+	Declarations
+		num workingYears, saveAmount, saved, gainedInterests
+		num year
+		num totalSaved = 0
+		num interests = 0.03
+		num annualSpending = 60000
+		num yearLimit = 30
+		string workingYearsPrompt = "Enter the amount of working years remaining in your career >> "
+		string saveAmountPrompt = "Enter the amount of money you can save annualy >> "
+	prompt()
+	savings()
+stop
+
+prompt()
+	output workingYearsPrompt
+	input workingYears   //working years stay the same after input
+	output saveAmountPrompt
+	input saveAmount    //save amount stays the same every year
+return
+
+savings()
+	/*this for loop uses a counter to keep counting until it matches the working years.
+	as the years pass, the amount saved for the year is added to the total amount saved over the years.
+	the year module keeps track of a passing year*/
+	
+	for year = 1 to workingYears step 1
+		saved = saveAmount + saveAmount*(interests)
+		totalSaved = totalSaved + saved
+		year++
+	endfor
+	year = 0
+	output year
+	output totalSaved
+	while(year < yearLimit)  //loop executes for 30 years or until savings equal 0
+		year++
+		if(totalSaved >= annualSpending) then
+			totalSaved = totalSaved - annualSpending   //user spends $60,000 per year
+			totalSaved = totalSaved + totalSaved*(interests)   //the remaining balance earns 3% on the remaining balance
+			output year
+			output totalSaved
+		else
+			if(totalSaved < annualSpending) then
+				totalSaved = 0
+				output year
+				output totalSaved
+				break  //breaks out of the loop after reachimg $0
+			endif
+		endif
+	endwhile
+return
