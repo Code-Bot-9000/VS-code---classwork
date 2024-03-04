@@ -1,0 +1,139 @@
+start
+	Declarations
+		num SIZE = 10
+		num ARRAY_SIZE = SIZE - 1
+		num roll
+		num search = 0   //counter
+		num dice[SIZE]   //size of the array is 10
+		computerDice[5]  //from 0 --> 4 = 5 dice rolls
+		playerDice[5]    //from 4 --> 9 = 5 dice rolls
+		num playerPoints = 0
+		num computerPoints = 0
+		num matches = 0
+		num fiveOfKind = 5
+		num fourOfKind = 4
+		num threeOfKind = 3
+		num pair = 2
+		num biggestComputer
+		num biggestPlayer
+	diceRolls()        //assigns values of all 10 "dice rolls"
+	computerAssign()   //assigns the first 5 "dice rolls" to the computer
+	playerAssign()     //assigns the last 5 "dice rolls" to the player
+	computerCheck()    //checks how many of the same kind "dice rolls" there are and assigns points to the computer
+	playerCheck()	   //checks how many of the same kind "dice rolls" there are and assigns points to the player
+	pointsOutput()     //outputs the points that the computer and player have
+	if(playerPoints > computerPoints) then
+		output "You win"
+	else
+		if(playerPoints < computerPoints) then
+		output "You lose"
+		endif
+	endif
+	if(playerPoints == computerPoints) then
+		if(biggestPlayer > biggestComputer) then
+			output "You win"
+		else
+			output "You lose"
+		endif
+	endif
+stop
+
+random() returns a random value from 1 - 6
+	LIMIT(1,6)
+return
+
+diceRolls()
+	for roll = 0 to ARRAY_SIZE step 1   //values for the "dice rolls" are assigned here
+		dice[roll] = random()   
+	endfor
+return
+
+computerAssign()
+	for roll = 0 to 4 step 1   
+		biggestComputer = computerDice[0]
+		computerDice[roll] = dice[roll]      //values for the "computer rolls" are assigned here   
+		if(computerDice[roll] > biggestComputer) then     //finds the biggest value in the computer rolls
+			biggestComputer = computerDice[roll]
+		endif
+	endfor
+return
+
+playerAssign()
+	biggestPlayer = playerDice[5]
+	for roll = 5 to ARRAY_SIZE step 1  
+		playerDice[roll] = dice[roll]     //values for the "player rolls" are assigned here
+		if(playerDice[roll] > biggestPlayer) then      //finds the biggest value in the player rolls
+			biggestPlayer = playerDice[roll]
+		endif
+	endfor
+return
+
+computerCheck()
+	for roll = 0 to 4 step 1
+		while(search <= 4)       //checks if each computer roll matches any of the other 5 rolls
+			if(computerDice[roll] == computerDice[search]) then
+				matches++
+				search++
+				if(matches > computerPoints) then  //only gains points if the amount of matches is higher than the last
+					computerPoints = matches
+				endif
+			else
+				search++
+			endif
+		endwhile
+		matches = 0   //resets to zero to check the other rolls
+		search = 0
+	endfor
+return
+
+playerCheck()
+	search = 5
+	for roll = 5 to ARRAY_SIZE step 1
+		while(search <= ARRAY_SIZE)       //checks if each player roll matches any of the other 5 rolls
+			if(playerDice[roll] == playerDice[search]) then
+				matches++
+				search++
+				if(matches > playerPoints) then  //only gains points if the amount of matches is higher than the last
+					playerPoints = matches
+				endif
+			else
+				search++
+			endif
+		endwhile
+		matches = 0   //resets to zero to check the other rolls
+		search = 5
+	endfor
+return
+
+pointsOutput()
+	if(computerPoints == fiveOfKind) then
+		output "Computer has ", fiveOfKind " of a kind"
+	else
+		if(computerPoints == fourOfKind) then
+			output "Computer has ", fourOfKind " of a kind"
+		else
+			if(computerPoints == threeOfKind) then
+				output "Computer has ", threeOfKind " of a kind"
+			else
+				if(computerPoints == pair) then
+					output "Computer has ", pair " of a kind"
+				endif
+			endif
+		endif	
+	endif
+	if(playerPoints == fiveOfKind) then
+		output "You have ", fiveOfKind " of a kind"
+	else
+		if(playerPoints == fourOfKind) then
+			output "You have ", fourOfKind " of a kind"
+		else
+			if(playerPoints == threeOfKind) then
+				output "You have ", threeOfKind " of a kind"
+			else
+				if(playerPoints == pair) then
+					output "You have ", pair " of a kind"
+				endif
+			endif
+		endif	
+	endif
+return
