@@ -1,5 +1,7 @@
 package Chapter_6;
 
+import java.util.Random;
+
 public class ArrayDemo{
     public static void main(String[] args) {
         String[] students = new String [5]; //Declaring a new string array of 5 elements

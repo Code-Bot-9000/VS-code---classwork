@@ -13,7 +13,7 @@ public class ArrayDemo2 {
             System.out.println("Enter student " + (i + 1) + ": ");
             students[i] = input.nextLine();
         }
-        for(int i = 0; i < students.length; i++){
+        for(int i = 0; i < students.length; i++){  //prints out the name of the students with or without comma depending on the conditions
             if(i<students.length - 1){
                 System.out.print(students[i]+ ", ");
             }
@@ -21,7 +21,7 @@ public class ArrayDemo2 {
                 System.out.println(students[i]);
             }
         }
-
+        
         input.close();
     }
 }
