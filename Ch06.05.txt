@@ -1,0 +1,40 @@
+start
+	Declarations
+		num SIZE = 9
+		num ARRAY_SIZE = SIZE - 1
+		num letter
+		char toGuess[SIZE] = 'M', 'I', 'N', 'E', 'C', 'R', 'A', 'F', 'T'
+		char guess[SIZE] = '-', '-', '-', '-', '-', '-', '-', '-', '-'
+		char playerInput
+		string guessPrompt = "Guess a letter."
+		boolean foundIt = false
+		num count = 0
+	output guessPrompt
+	input playerInput
+	while(foundIt == false)
+		for letter = 0 to ARRAY_SIZE step 1
+			if(playerInput == toGuess[letter]) then
+				guess[letter] == toGuess[letter]
+				count++
+				output "Correct!"
+			endif
+			if(count == 9) then     //if all the letters are found, then foundIt becomes true and exits the loop
+				foundIt = true
+			endif
+			if(playerInput != toGuess[letter]) then
+				output "Wrong"
+			endif
+		wordOutput()
+		output guessPrompt
+		input playerInput
+		endfor
+	endwhile
+	wordOutput()
+	output "You win!"
+stop
+
+wordOutput()  //outputs the current guess
+	for letter = 0 to ARRAY_SIZE step 1
+		output guess[letter]
+	endfor
+return

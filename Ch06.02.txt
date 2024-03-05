@@ -1,0 +1,36 @@
+start
+	Declarations
+		num SIZE = 5
+		num ARRAY_LIMIT = SIZE - 1
+		num count
+		num correct = 0
+		num incorrect = 0
+		string questions[SIZE] = "Do I like minecraft?", "Do I like Fortnite?", "Do I like Elden Ring?", "Do I like DayZ?", "Do I like Fallout?"
+		string answers[SIZE] = "A", "B", "A", "A", "C"
+		string prompt = Enter A for yes, B for no, and C for kinda
+		string response  //user response(input)
+	askUser()
+	output correct
+	output incorrect
+stop
+
+askUser()
+	for count = 0 to ARRAY_LIMIT step 1
+		output questions[count]   //asks questions in order
+		output prompt   //informs the user about using A, B, or C
+		input response
+		while(response != "A" || response != "B" || response != "C")  //if the user enters anything other than A, B, C - reprompt
+			output questions[count]   //asks questions in order
+			output prompt   //informs the user about using A, B, or C
+			input response
+		endwhile
+		if(response == answers[count]) then
+			correct++
+			output "Correct!"
+		endif
+		if(response != ) then
+			incorrect++
+			output "The answer is ", answers[count]  //outputs the correct answer if the response is wrong
+		endif
+	endfor
+return

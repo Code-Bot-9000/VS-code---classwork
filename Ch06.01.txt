@@ -1,0 +1,15 @@
+start
+	Declarations
+		num response = random()
+		num SIZE = 8
+		string answer[SIZE] = "It remains to be seen", "No", "Yes", "Concentrate and ask again", "Signs point to yes", "Don't count on it", "It is certain", "As I see it, yes"
+		string prompt = "Ask a question..."
+		string question
+	output prompt
+	input question
+	output answer[response]
+stop
+
+random() //returns a random number between 1 and 8
+	LIMIT(1,8)
+return
