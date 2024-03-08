@@ -3,7 +3,6 @@ start
 		SIZE = 20
 		ARRAY_SIZE = SIZE - 1
 		num numbers[SIZE]
-		num order[SIZE]
 		num enteredNums
 		num count
 		string prompt = "Enter a number >> "
