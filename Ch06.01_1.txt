@@ -1,7 +1,7 @@
 start
 	Declarations
-		SIZE = 20
-		ARRAY_SIZE = SIZE - 1
+		num SIZE = 20
+		num ARRAY_SIZE = SIZE - 1
 		num numbers[SIZE]
 		num enteredNums
 		num count
