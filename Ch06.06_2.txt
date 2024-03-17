@@ -1,0 +1,36 @@
+start
+	Declarations
+		num SIZE = 20
+		num ARRAY_SIZE = SIZE - 1
+		num numArray[SIZE]
+		num largest, smallest, count, enteredNum
+		string prompt = "Enter a number. To exit, enter a negative number >> "
+	for count = 0 to ARRAY_SIZE step 1  //runs 20 times
+		userPrompt()   
+		smallOrLarge()
+		output numArray[count]   //outputs all the numbers
+		if(enteredNum < 0) then   //if a negative number is entered, the loop is maxed out and exits
+			count = ARRAY_SIZE
+		endif
+	endfor
+	ooutput smallest, largest   //outputs the smallest and largest numbers once the loop is finished
+stop
+
+userPrompt()   //prompts the user
+	output prompt
+	input enteredNum
+	numArray[count] = enteredNum    //assigns the inputted number to one of the 20 numbers entered
+return
+
+smallOrLarge()   determines if the entered number is the largest or smallest
+	if(count == 0) then   //initializes smallest and largest number on the first loop run
+		smallest = largest = enteredNum
+	endif
+	if(smallest < enteredNum) then
+		smallest = enteredNum
+	else
+		if(largest > enteredNum) then
+				largest = enteredNum
+		endif
+	endif
+return
