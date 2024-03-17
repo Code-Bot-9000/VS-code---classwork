@@ -1,0 +1,38 @@
+start
+	Declarations
+		num SIZE = 7
+		num ARRAY_SIZE = SIZE - 1
+		num departmentNumber, hourlySalary, hoursWorked, count
+		num grossPayroll
+		num departmentPayroll[SIZE]
+		string departmentNames[SIZE] = "Personnel", "Marketing", "Manufacturing", "Computer Services", "Sales", "Accounting", "Shipping"
+		string deptNumPrompt = "Enter your department number >> "
+		string salaryPrompt = "Enter your hourly salary >> "
+		string hoursPrompt = "Enter the number of hours worked >> "
+	housekeeping()
+	endOfJob()
+stop
+
+userPrompt()   //collects information about the user
+	output deptNumPrompt
+	input departmentNumber
+	output salaryPrompt
+	input salary
+	output hoursPrompt
+	input hourlySalary
+return
+
+housekeeping()   //collects information about the user
+	for count = 0 to ARRAY_SIZE step 1
+		userPrompt()
+		grossPayroll  = hourlySalary * hoursWorked
+		departmentPayroll[departmentNumber] = grossPayroll   //assigns a gross payroll to the department number entered by the user
+	endfor
+return
+
+endOfJob()   //outputs the information
+	for count = 0 to ARRAY_SIZE step 1
+		output departmentNames[count]
+		output "Has a gross payroll of ", departmentPayroll[count]
+	endfor
+return
