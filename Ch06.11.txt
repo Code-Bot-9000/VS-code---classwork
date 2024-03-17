@@ -28,6 +28,7 @@ housekeeping()   //runs the program until it is finished
 				4: charges = charges + productsCost[3]
 				default: charges = charges + productsCost[4]
 			endcase
+			output "You have added ",products[wantedTopping - 1]
 			addedItems++
 			userPrompt()   //reprompts the user for an additional item, or sentinel value
 		else
