@@ -7,5 +7,6 @@ start
 		string prompt = "Enter the class you'd like to enter from 1 - 5. >> "
 	output prompt
 	input classNum
+	classNum = classNum - 1
 	output classes[classNum]
 stop
