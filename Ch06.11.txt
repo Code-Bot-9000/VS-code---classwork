@@ -1,0 +1,41 @@
+start
+	Declarations
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		num charges = 2
+		num wantedTopping, count, addedItems
+		string products[SIZE] = "Whipped cream", "Cinnamon", "Chocolate sauce", "Amaretto", "Irish whiskey"
+		num productsCost[SIZE] = 0.89, 0.25, 0.59, 1.50, 1.75
+		string prompt = "Enter a topping from the list by entering a number between 1 and 5, or enter zero to exit >> "
+		string incorrectItem = "Sorry, we do not carry that"
+	userPrompt()
+	housekeeping()
+	output "Your total is $", charges
+stop
+
+userPrompt()   //prompts the user for a topping
+	output prompt
+	input wantedTopping
+return
+
+housekeeping()   //runs the program until it is finished
+	while(wantedTopping > 0 || wantedTopping < 0)   //keeps running if the sentinel value 0 is not entered
+		if(wantedTopping <= SIZE && wantedTopping > 0) then
+			case wantedTopping   //adds charges based on what topping the user wants
+				1: charges = charges + productsCost[0]
+				2: charges = charges + productsCost[1]
+				3: charges = charges + productsCost[2]
+				4: charges = charges + productsCost[3]
+				default: charges = charges + productsCost[4]
+			endcase
+			addedItems++
+			userPrompt()   //reprompts the user for an additional item, or sentinel value
+		else
+			output incorrectItem
+			userPrompt()   //reprompts the user if the user enters an incorrect item number
+		endif
+		if(addedItems == SIZE) then   //exits the loop if all the items have been added
+			wantedTopping = 0
+		endif
+	endwhile
+return
