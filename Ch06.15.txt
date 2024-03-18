@@ -1,0 +1,104 @@
+start
+	Declarations
+		string name
+		char gender, maritalStatus
+		num annualIncome, age
+		num nineteenMax, twentyNineMax, thirtyNineMax, fourtyNineMax, fiftyUp
+		num maleGroup1 = 0, maleGroup2 = 0, maleGroup3 = 0, maleGroup4 = 0, maleGroup5 = 0   //counter for males by age group
+		num femaleGroup1 = 0, femaleGroup2 = 0, femaleGroup3 = 0, femaleGroup4 = 0, femaleGroup5 = 0   //counter for females by age group
+		string namePrompt = "Enter a name or EXIT to exit >> "
+		string agePrompt = "Enter your age >> "
+		string genderPrompt = "Enter your gender as M for male or F for female >> "
+		string maritalStatusPrompt = "Are you married? Y or N?"
+		string incomePrompt = "Enter yourt annual income >> "
+		boolean stop = false
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		num maleAgeGroup[SIZE]
+		num femaleAgeGroup[SIZE]
+	while(stop == false)
+		userPrompt()
+		detail()
+	endwhile
+	endOfJob()
+stop
+
+userPrompt()   //prompts the user for information
+	output namePrompt
+	input name
+	if(name =! "EXIT") then
+		output agePrompt
+		input age
+		output genderPrompt
+		input gender
+		output maritalStatusPrompt
+		input maritalStatus
+		output incomePrompt
+		input income
+	else
+		stop = true
+	endif
+return
+
+detail()   //collects data based on the userPrompt
+	if(age < 20) then
+		nineteenMax++   //keeps count of age group
+		if(gender == 'M') then   //keeps count of gender by age group
+			maleGroup1++
+			maleAgeGroup[0] = maleGroup1
+		else
+			femaleGroup1++
+			femaleAgeGroup[0] = femaleGroup1
+		endif
+	else
+		if(age > 20 && age <= 29) then
+			twentyNineMax++
+			if(gender == 'M') then
+				maleGroup2++
+				maleAgeGroup[1] = maleGroup2
+			else
+				femaleGroup2++
+				femaleAgeGroup[1] = femaleGroup2
+			endif
+		else
+			if(age > 29 && age <= 39) then
+				thirtyNineMax++
+				if(gender == 'M') then
+					maleGroup3++
+					maleAgeGroup[2] = maleGroup3
+				else
+					femaleGroup3++
+					femaleAgeGroup[2] = femaleGroup3
+				endif
+			else
+				if(age > 39 && age <= 49) then
+					fourtyNineMax++
+					if(gender == 'M') then
+						maleGroup4++
+						maleAgeGroup[3] = maleGroup4
+					else
+						femaleGroup4++
+						femaleAgeGroup[3] = femaleGroup4
+					endif
+				else
+					fiftyUp++
+					if(gender == 'M') then
+						maleGroup5++
+						maleAgeGroup[4] = maleGroup5
+					else
+						femaleGroup5++
+						femaleAgeGroup[4] = femaleGroup5
+					endif
+				endif
+			endif
+		endif
+	endif
+return
+
+endOfJob()
+	output "Readers younger than 20 is ", nineteenMax, " with ", maleAgeGroup[0], " males and " femaleAgeGroup[0], " females."
+	output "Readers between 20–29 is ", twentyNineMax, " with ", maleAgeGroup[1], " males and " femaleAgeGroup[1], " females."
+	output "Readers between 30–39 is ", thirtyNineMax, " with ", maleAgeGroup[2], " males and " femaleAgeGroup[2], " females."
+	output "Readers between 40–49 is ", fourtyNineMax, " with ", maleAgeGroup[3], " males and " femaleAgeGroup[3], " females."
+	output "Readers  50 and older is ", fiftyUp, " with ", maleAgeGroup[4], " males and " femaleAgeGroup[4], " females."
+return
