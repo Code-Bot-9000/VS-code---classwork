@@ -1,0 +1,80 @@
+start
+	Declarations
+		num SIZE = 7
+		num ARRAY_SIZE = SIZE - 1
+		string salespersonName[SIZE] = "Darwin", "Kratz", "Patel", "Fortune", "Wickert", "Rodriguez", "Kumar"
+		num idNum[SIZE] = 103, 104, 201, 319, 367, 388, 435
+		num salespersonSales[SIZE] = 0, 0, 0, 0, 0, 0, 0   //keeps track of how many sales each salesperson had
+		num totalSales[SIZE] = 0, 0, 0, 0, 0, 0, 0  //keeps track of the amont of money in sales each salesperson had
+		num salespersonCommisions[SIZE] = 0, 0, 0, 0, 0, 0, 0
+		num saleAmount, commisionRate
+		num idNumInput, day, month, count
+		boolean idMatch = false
+		string idPrompt = "Enter the salesperson ID number who made a sale >> "
+		string salePrompt = "Enter the sale amount >> "
+		string monthPrompt = "Enter the month >> "
+		string dayPrompt = "Enter the day >> "
+	userPrompt()
+	endOfJob()
+stop
+
+userPrompt()   //prompts the user for information
+	output idPrompt   //we can get the name from the ID number
+	input idNumInput
+	if(idNumInput == idNum[count]) then
+		idMatch = true
+		salespersonSales[count] = salespersonSales[count] + 1   //Keeps track of the amount  of sales that each salesperson has
+		output salePrompt
+		input saleAmount
+		totalSales[count] = totalSales[count] + saleAmount
+		detail()
+		salespersonCommisions[count] = salespersonCommisions[count] + (saleAmount * commisionRate)
+	endif
+	count = 0
+	while(idMatch == false)   //reprompts the user if the id numbered entered doed not match an ID number in the array
+		for count = 0 to ARRAY_SIZE step 1
+			if(idNumInput == idNum[count]) then
+				idMatch = true
+				salespersonSales[count] = salespersonSales[count] + 1   //Keeps track of the amount  of sales that each salesperson has
+				output salePrompt
+				input saleAmount
+				totalSales[count] = totalSales[count] + saleAmount
+				detail()
+				salespersonCommisions[count] = salespersonCommisions[count] + (saleAmount * commisionRate)
+			endif
+		endfor
+		if(idMatch == false) then
+			output idPrompt
+			input idNumInput
+		endif
+	endwhile
+	idMatch = false   //reset to false for reuse
+	output monthPrompt
+	input month
+	output dayPrompt
+	input day
+return
+
+detail()   processes data based on user input
+	if(saleAmount <= 50999) then
+		commisionRate = 0.04
+	else
+		if(saleAmount > 50999 && saleAmount <= 125999) then
+			commisionRate = 0.05
+		else
+			if(saleAmount > 125999 && saleAmount <= 200999) then
+				commisionRate = 0.06
+			else
+				commisionRate = 0.07
+			endif
+		endif
+	endif
+return
+
+endOfJob()   //outputs the end goal information
+	for count = 0 to ARRAY_SIZE step 1
+		output "Salesperson ", (count + 1), " has an ID number ", idNum[count], ". Their name is ", salespersonName[count]
+		output "This salesperson had ", salespersonSales[count], " transactions with a total of ", totalSales[count], " in total sales"
+		output "The total in commisions for this salesperson is ", salespersonCommisions[count]
+	endfor
+return
