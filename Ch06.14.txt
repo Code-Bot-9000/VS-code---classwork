@@ -14,6 +14,7 @@ start
 		userPrompt()
 		detail()
 	endwhile
+	endOfJob()
 stop
 
 userPrompt()   //prompts the user for information
