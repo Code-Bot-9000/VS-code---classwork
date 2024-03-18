@@ -1,0 +1,62 @@
+start
+	Declarations
+		string name
+		char gender, maritalStatus
+		num annualIncome, age
+		num nineteenMax, twentyNineMax, thirtyNineMax, fourtyNineMax, fiftyUp
+		string namePrompt = "Enter a name or EXIT to exit >> "
+		string agePrompt = "Enter your age >> "
+		string genderPrompt = "Enter your gender as M for male, F for female, or O for other >> "
+		string maritalStatusPrompt = "Are you married? Y or N?"
+		string incomePrompt = "Enter yourt annual income >> "
+		boolean stop = false
+	while(stop == false)
+		userPrompt()
+		detail()
+	endwhile
+stop
+
+userPrompt()   //prompts the user for information
+	output namePrompt
+	input name
+	if(name =! "EXIT") then
+		output agePrompt
+		input age
+		output genderPrompt
+		input gender
+		output maritalStatusPrompt
+		input maritalStatus
+		output incomePrompt
+		input income
+	else
+		stop = true
+	endif
+return
+
+detail()   //collects data based on the userPrompt
+	if(age < 20) then
+		nineteenMax++
+	else
+		if(age > 20 && age <= 29) then
+			twentyNineMax++
+		else
+			if(age > 29 && age <= 39) then
+				thirtyNineMax++
+			else
+				if(age > 39 && age <= 49) then
+					fourtyNineMax++
+				else
+					fiftyUp++
+				endif
+			endif
+		endif
+	endif
+return
+
+endOfJob()
+	output "Readers younger than 20 is ", nineteenMax
+	output "Readers between 20–29 is ", twentyNineMax
+	output "Readers between 30–39 is ", thirtyNineMax
+	output "Readers between 40–49 is ", fourtyNineMax
+	output "Readers  50 and older is ", fiftyUp
+return
