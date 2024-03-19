@@ -1,0 +1,26 @@
+start
+	Declarations
+		num enteredNums
+		num count = 0
+		num numbers[count]
+		string prompt = "Enter a number from 0 to 20, or a negative number to exit >> "
+	userPrompt()   //prompts and assigns enteredNums 
+	while(enteredNums >= 0)   //continues to run until a negative number is entered
+		count++
+		userPrompt()
+	endwhile
+	while(count != 0)    //because of the previous for loop, count variable should equal the array size
+		output numbers[count]
+		count--   //subtracts 1 from the count variable and displays the array in reverse order since its going down the array
+	endwhile
+stop
+
+userPrompt()
+	output prompt
+	input enteredNums
+	while(enteredNums > 20) then //reprompts if the number isn't less than or equal to 20
+		output prompt
+		input enteredNums
+	endwhile
+	numbers[count] = enteredNums
+return

@@ -1,0 +1,25 @@
+start
+	Declarations
+		num SIZE = 10
+		num ARRAY_SIZE = SIZE - 1
+		string commonPasswords[SIZE] = "Password","123456", "12345678", "123456789", "111111", "12345", "QWERTY", "123123", "ILOVEYOU", "1q2w3e"
+		boolean common = true
+		string password
+		num count
+		string prompt = "Enter a password that is not common >> "
+	userPrompt()
+	while(common == true)
+		for count = 0 to ARRAY_SIZE step 1   //runs through ther common passwords and checks to see if the entered password matches or not
+			if(password == commonPasswords[count]) then
+				userPrompt()
+			else
+				common = false   //exits the loop if the password is not common
+			endif
+		endfor
+	endwhile
+stop
+
+userPrompt()   //prompts and collects a password
+	output prompt
+	input password
+return

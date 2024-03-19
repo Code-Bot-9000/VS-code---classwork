@@ -1,0 +1,41 @@
+start
+	Declarations
+		num SIZE = 12
+		num ARRAY_SIZE = SIZE - 1
+		num monthDays[SIZE] = 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+		string monthNames[SIZE] = "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+		num count, month, day
+		num numericPosition = 0
+		string monthPrompt = "Enter your birthday month from 1 - 12"
+		string dayPrompt = "Enter your day of birth >> "
+	userPrompt()
+	detail()
+	output "Your numeric position in the year is ", numericPosition
+	output "Your Zodiac sign is ", 
+stop
+
+userPrompt()
+	output monthPrompt
+	input month
+	output dayPrompt
+	input day
+	while(day > monthDays[month - 1] || day < monthDays[month - 1])   //reprompts the user if the day entered is out of bounds for the month entered
+		output monthPrompt
+		input month
+		output dayPrompt
+		input day
+	endwhile
+return
+
+detail()   //computes the information entered
+	for count = 0 to (month - 1) step 1
+		if(count != (month - 1)) then
+		numericPosition = numericPosition + monthDays[count]
+		endif
+	endfor
+	numericPosition = numericPosition + day
+return
+
+endOfJob()
+	
+return

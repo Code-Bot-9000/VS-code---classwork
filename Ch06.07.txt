@@ -1,0 +1,47 @@
+start
+	Declarations
+		num SIZE = 25
+		num ARRAY_SIZE = SIZE - 1
+		num members, count
+		string name
+		string trainerList[SIZE]
+		num membersRecruited[SIZE]
+		num fiveMax, twelveMax, twentyMax, twentyPlus
+		string namePrompt = "Enter the name of the trainer >> "
+		string enrolledPrompt = "Enter the number of members that this trainer has enrolled this year >> "
+	for count = 0 to ARRAY_SIZE step 1
+		userPrompt()
+		recruitGrouping()
+	endfor
+	output "The count of the number of trainers who have enrolled 0 to 5 members is ", fiveMax
+	output "The count of the number of trainers who have enrolled 6 to 12 members is ", twelveMax
+	output "The count of the number of trainers who have enrolled 13 to 20 members is ", twentyMax
+	output "The count of the number of trainers who have enrolled more than 20 members is ", twentyPlus
+stop
+
+userPrompt()   //prompts the user for trainer name and member count
+	output namePrompt
+	input name
+	trainerList[count] = name   //assigns a trainer to each value of the array
+	output enrolledPrompt
+	input members
+	membersRecruited[count] = members   //assigns the members recruited to each value of the array
+return
+
+recruitGrouping()   //takes a count of the members recruited by grouping
+	if(membersRecruited[count] <= 5) then
+		fiveMax++   //count of the number of trainers who have enrolled 0 to 5 members
+	else
+		if(membersRecruited[count] > 5 && membersRecruited[count] <= 12) then
+			twelveMax++   //count of the number of trainers who have enrolled 6 to 12 members
+		else
+			if(membersRecruited[count] > 12 && membersRecruited[count] <= 20) then
+				twentyMax++   //count of the number of trainers who have enrolled 13 to 20 members
+			else
+				if(membersRecruited[count] > 20) then
+					twentyPlus++   //count of the number of trainers who have enrolled more than 20 members
+				endif
+			endif
+		endif
+	endif
+return

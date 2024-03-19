@@ -1,0 +1,12 @@
+start
+	Declarations
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		num classNum
+		string classes[SIZE] = "Yoga 1", "Yoga 2", "Children’s Yoga", "Prenatal Yoga", "Senior Yoga"
+		string prompt = "Enter the class you'd like to enter from 1 - 5. >> "
+	output prompt
+	input classNum
+	classNum = classNum - 1
+	output classes[classNum]
+stop

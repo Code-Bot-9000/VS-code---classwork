@@ -1,0 +1,21 @@
+start
+	Declarations
+		num SIZE = 20
+		num ARRAY_SIZE = SIZE - 1
+		num numArray[20]
+		num average, difference, enteredNum, count = 0
+		string prompt = "Enter a number. To exit, enter a negative number >> "
+	for count = 0 to ARRAY_SIZE step 1   //takes input for the 20 numbers into the array
+		output prompt
+		input enteredNum
+		if(enteredNum >= 0) then
+			numArray[count] = enteredNum
+			output numArray[count]    //outputs the number entered
+			average = numArray[count] / (count + 1)
+			difference = numArray[count] - average
+			output difference
+		else
+			count = ARRAY_SIZE   //ends the loop if a negative number is entered
+		endif
+	endfor
+stop

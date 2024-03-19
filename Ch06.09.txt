@@ -1,0 +1,50 @@
+start
+	Declarations
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		num classNum, count
+		num class1, class2, class3, class4, class5, classCount
+		string classes[SIZE] = "Yoga 1", "Yoga 2", "Children’s Yoga", "Prenatal Yoga", "Senior Yoga"
+		string prompt = "Enter the classes you'd like to enter from 1 - 5. To exit, enter zero >> "
+	userPrompt()
+	userInfoDisplay()
+stop
+
+userPrompt()
+	output prompt
+	input classNum
+	while(classNum > 0)   //number entered by user has to be a clas from 1-5 (greater than zero)
+		classNum = classNum - 1   //class number adjusted for array size
+		while(classNum <= ARRAY_SIZE)   //class number cannot be greater than array size
+			classGrouping()
+		endwhile
+		if(classNum > ARRAY_SIZE) then   //if the class number is greater than the array size, then the user gets reprompted
+			output prompt
+			input classNum
+		endif
+	endwhile
+return
+
+classGrouping()   //groups the requests for each class
+	case classNum
+		0: class1++
+		1: class2++
+		2: class3++
+		3: class4++
+		default: class5++
+	endcase
+return
+
+userInfoDisplay()
+	for count = 0 to ARRAY_SIZE step 1
+		case count
+			0: classCount = class1
+			1: classCount = class2
+			2: classCount = class3
+			3: classCount = class4
+			default: classCount = class5
+		endcase
+		output classes[count]   //outputs the class name
+		output classCount   //outputs  class registration count
+	endfor
+return

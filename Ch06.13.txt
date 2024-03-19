@@ -1,0 +1,58 @@
+start
+	Declarations
+		string name
+		num hourlyWage, hoursWorked
+		num grossPay, withholdingTaxPercentage, withholdingTaxAmount, netPay
+		num sumHours = 0, sumGrossPayroll = 0, sumWithholding = 0, sumNetPayroll = 0
+		string namePrompt = "Enter an employee name. Type EXIT to exit >> "
+		string wagePrompt = "Enter the hourly wage for this employee >> "
+		string hoursPrompt = "Enter the hours worked for this employee >> "
+		boolean stop = false
+	userPrompt()
+	while(stop = false)
+		if(name == "EXIT") then   //exits the loop if the name entered is EXIT
+			stop = true
+		endif
+		detail()
+		output name, hoursWorked, hourlyWage, grossPay, withholdingTaxPercentage, withholdingTaxAmount, netPay   //outputs all the employee information (can be more detailed on the actual code)
+	endwhile
+	endOfJob()
+stop
+
+userPrompt()
+	output namePrompt
+	input name
+	output wagePrompt
+	input hourlyWage
+	output hoursPrompt
+	intput hoursWorked
+return
+
+detail()   //computes the employee gross pay withholding tax percentage, withholding tax amount, and net pay
+	grossPay = hoursWorked * hourlyWage
+	if(grossPay > 0.00 && grossPay <= 300.00) then
+		withholdingTaxPercentage = 0.10
+	else
+		if(grossPay > 300.00 && grossPay <= 550.00) then
+			withholdingTaxPercentage = 0.13
+		else
+			if(grossPay > 550.00 && grossPay <= 800.00) then
+				withholdingTaxPercentage = 0.16
+			else
+				if(grossPay > 800.00) then
+					withholdingTaxPercentage = 0.20
+				endif
+			endif
+		endif
+	endif
+	withholdingTaxAmount = (grossPay * withholdingTaxPercentage)
+	netPay = grossPay - withholdingTaxAmount
+	sumHours = sumHours + hoursWorked
+	sumGrossPayroll = sumGrossPayroll + grossPay
+	sumWithholding = sumWithholding + withholdingTaxAmount
+	sumNetPayroll = sumNetPayroll + netPay
+return
+
+endOfJob()   //outputs the total of all the information
+	output sumHours, sumGrossPayroll, sumWithholding, sumNetPayroll   //can be more detailed during coding
+return

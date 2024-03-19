@@ -1,0 +1,18 @@
+start
+	Declarations
+		num SIZE = 20
+		num ARRAY_SIZE = SIZE - 1
+		num numbers[SIZE]
+		num enteredNums
+		num count
+		string prompt = "Enter a number >> "
+	for count = 0 to ARRAY_SIZE step 1   //this loop initializes the 20 numbers entered by the user
+		output prompt
+		input enteredNums
+		numbers[count] = enteredNums
+	endfor
+	while(count != 0)    //because of the previous for loop, count variable should equal ARRAY_SIZE
+		output numbers[count]
+		count--   //subtracts 1 from the count variable and displays the array in reverse order since its going down the array
+	endwhile
+stop
