@@ -6,6 +6,6 @@ start
 		string monthNames[SIZE] = "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
 		num count
 	for count = 0 to ARRAY_SIZE step 1
-		output monthNames[count], " has ", monthDays[count], " days."
+		output "Month ", (count + 1), " has ", monthDays[count], " days."
 	endfor
 stop
