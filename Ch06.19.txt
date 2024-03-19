@@ -1,0 +1,11 @@
+start
+	Declarations
+		num SIZE = 12
+		num ARRAY_SIZE = SIZE - 1
+		num monthDays[SIZE] = 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+		string monthNames[SIZE] = "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+		num count
+	for count = 0 to ARRAY_SIZE step 1
+		output monthNames[count], " has ", monthDays[count], " days."
+	endfor
+stop
