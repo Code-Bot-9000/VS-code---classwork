@@ -1,0 +1,47 @@
+start
+	Declarations
+		num totalCards = 52
+		num DECK_ARRAY = totalCards - 1
+		num SIZE = 4
+		num SUIT_ARRAY = SIZE - 1
+		num valuesCount = 13
+		num VALUES_ARRAY = valuesCount - 1
+		num card
+		num count
+		num cardNum = 0
+		string valueName
+		num cardValues[13] = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		string suits[SIZE] = "Clubs", "Diamonds", "Hearts", "Spades"
+		string deck[totalCards]
+		num rounds = 0   //should be 26 rounds max
+	
+stop
+
+deckOfCards()
+	for count = 0 to SUIT_ARRAY step 1           //goes through each type of card suit  //0 - 3 (4 array values)
+		for card = 0 to VALUES_ARRAY step 1      //goes through each card value   //0 - 12 (13 array values)
+			if(cardValues[card] == 0) then
+				valueName = "Ace"
+				deck[cardNum] = valueName + " of " + suits[count]
+			else
+				if(cardValues[card] == 10) then
+					valueName = "Jack"
+					deck[cardNum] = valueName + " of " + suits[count]
+				else
+					if(cardValues[card] == 11) then
+						valueName = "Queen"
+						deck[cardNum] = valueName + " of " + suits[count]
+					else
+						if(cardValues[card == 12]) then
+							valueName = "King"
+							deck[cardNum] = valueName + " of " + suits[count]
+						else
+							deck[cardNum] = cardValues[card], " of " + suits[count]     //assigns values to the deck of 52 cards
+						endif
+					endif
+				endif
+			endif
+			cardNum++  //counter helps assign values to the deck array
+		endfor
+	endfor
+return
