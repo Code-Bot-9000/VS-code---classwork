@@ -27,11 +27,11 @@ readEast()
 return
 
 readMidWest()
-	input lastName, firstName, gamesWon from eastInput
+	input lastName, firstName, gamesWon from midWestInput
 return
 
 readWest()
-	input lastName, firstName, gamesWon from eastInput
+	input lastName, firstName, gamesWon from westernInput
 return
 
 detailLoop()
