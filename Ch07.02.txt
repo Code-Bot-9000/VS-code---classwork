@@ -1,0 +1,83 @@
+start
+	Declarations
+		string name
+		num guess = 0, result, count
+		num plays = 0, bestScore
+		string namePrompt = "Enter your name >> "
+		string guessPrompt = "Guess a number between 1 and 100 >> "
+		string correct = "Your guess was correct!"
+		string high = "Your guess was too high!"
+		string low = "Your guess was too low!"
+		num tries = 0   //counts the number of tries until it was correct
+		string score = "To beat your high score, guess the number before this many tries >> "
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		num saveScore[SIZE] = 0, 0, 0, 0, 0
+		OutputFile highScoreOutput
+		boolean nameFound = false
+	output namePrompt
+	input name
+	while(plays < 5)   //keeps track of how many games have been played
+		result = random()   //assigns random number to result variable
+		playGame()
+		while(guess != result)   //reprompts the user if the guess is not correct
+			playGame()
+		endwhile
+		saveScore[plays] = tries   //keeps a score for every time played, based on the amount of tries until correct
+		plays++
+		tries = 0   //resets the amount of tries after each play
+	endwhile
+	highScore()   //gets the best score out of the 5 games played
+	saveToFile()
+stop
+
+
+random()	//returns a number between 1 and 100
+	limit(1,100)
+return
+
+outcome()
+	if(guess > result) then
+		output high
+	else
+		if(guess < result) then
+			output low
+		else
+			output correct
+			output score, tries
+		endif
+	endif
+return
+
+housekeeping()
+	output guessPrompt
+	input guess
+return
+
+playGame()
+	tries++
+	housekeeping()
+	outcome()
+return
+
+highScore()
+	bestScore = saveScore[0]
+	for count = 1 to ARRAY_SIZE step 1
+		if(saveScore[count] < bestScore) then
+			bestScore = saveScore[count]
+		endif
+	endfor
+return
+
+saveToFile()
+	while(eof not reach)
+	if(name exists) then
+		output bestScore to highScoreOutput
+		add lowest score to name record
+		nameFound = true
+	endif
+	if(nameFound = false) then
+		output name, bestScore to highScoreOutput
+		append name and lowest score
+	endwhile
+return
