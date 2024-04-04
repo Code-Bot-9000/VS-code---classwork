@@ -1,0 +1,49 @@
+start
+	Declarations
+		InputFile eastInput
+		InputFile midWestInput
+		InputFile westernInput
+		OutputFile mergedInfo
+		string lastName, firstName
+		num gamesWon
+	housekeeping()
+	while not eof
+		detailLoop()
+	endwhile
+	finish()
+stop
+
+housekeeping()
+	open eastInput "eastInput.dat"
+	open midWestInput "midWestInput.dat"
+	open westernInput "westernInput.dat"
+	readEast()
+	readMidWest()
+	readWest()
+return
+
+readEast()
+	input lastName, firstName, gamesWon from eastInput
+return
+
+readMidWest()
+	input lastName, firstName, gamesWon from midWestInput
+return
+
+readWest()
+	input lastName, firstName, gamesWon from westernInput
+return
+
+detailLoop()
+	output lastName, firstName, gamesWon to mergedInfo
+	readEast()
+	readMidWest()
+	readWest()
+return
+
+finish()
+	close eastInput
+	close midWestInput
+	close westernInput
+	close mergedInfo
+return
