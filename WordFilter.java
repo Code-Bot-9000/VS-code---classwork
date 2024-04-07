@@ -23,7 +23,7 @@ public class WordFilter{
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> result = new ArrayList<>();
  
-        
+        //prompts the user for the length of the desired length
         System.out.print("Enter the length of words to filter by: ");
         int input = scanner.nextInt();
 
