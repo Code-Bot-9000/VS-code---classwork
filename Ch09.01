@@ -1,0 +1,52 @@
+start
+	Declarations
+		//questions left empty for this example
+		//questions are there as placeholders and to show the logic of the program
+		string question1 = ""
+		string question2 = ""
+		string question3 = ""
+		string question4 = ""
+		string question5 = ""
+		char answer
+		num correctCount = 0
+		num count
+		num SIZE = 5
+		num ARRAY_SIZE = SIZE - 1
+		string QUESTIONS[SIZE] = question1, question2, question3, question4, question5
+		char ANSWERS = 'D', 'B', 'A', 'C', 'D'
+	for count = 0 to ARRAY_SIZE step 1
+		answer = prompt(count, QUESTIONS)   //holds the value for the user's input
+		correctCount = correctCount + answerResult(answer, count, ANSWERS)   //this method will return a 1 to be stored here in the main method if correct
+	endfor
+	output "You answered ", correctCount, " correct!"
+	output "You got ", (5 - correctCount), " incorrect!"
+stop
+
+
+prompt(num count, string QUESTIONS[])
+	Declarations
+		char answer
+	output QUESTIONS[count]   //outputs the 5 questions based on where the loop in the main method is at
+	input answer
+	while(valid == false)
+		input answer
+		if(answer == 'A'|| answer == 'B'|| answer == 'C'|| answer == 'D') then
+			valid = true   //if input for the answer is valid, then we exit the loop
+		else
+			output "Incorrect input. Try again"
+			output QUESTIONS[count]
+		endif
+	endwhile
+	//no need to reset valid to false because these values wont save unless we return them
+return answer
+
+answerResult(char answer, num count, char ANSWERS[])
+	Declarations
+		num correctCount = 0
+	if(answer == ANSWERS[count]) then   //checks if the answer inputted by the user is correct for the question anked
+		output "Correct!"
+		correctCount++
+	else
+		output "Incorrect!"
+	endif
+return correctCount
