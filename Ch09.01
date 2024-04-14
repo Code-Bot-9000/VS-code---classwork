@@ -29,12 +29,12 @@ prompt(num count, string QUESTIONS[])
 	output QUESTIONS[count]   //outputs the 5 questions based on where the loop in the main method is at
 	input answer
 	while(valid == false)
-		input answer
 		if(answer == 'A'|| answer == 'B'|| answer == 'C'|| answer == 'D') then
 			valid = true   //if input for the answer is valid, then we exit the loop
 		else
 			output "Incorrect input. Try again"
 			output QUESTIONS[count]
+			input answer
 		endif
 	endwhile
 	//no need to reset valid to false because these values wont save unless we return them
