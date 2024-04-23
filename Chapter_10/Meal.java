@@ -1,3 +1,5 @@
+package Chapter_10;
+
 public class Meal {
     //public static Object adultMeal;
     private String mainDish;
