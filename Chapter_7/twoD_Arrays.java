@@ -17,8 +17,8 @@ public class twoD_Arrays {
             for(int column = 0; column< arr[row].length;column++){
                 if(arr[row][column] == num){
                     System.out.println("Your number was located at: \nrow: "+ 
-                    row + " and column: " +
-                    column + ".");
+                    (row+1) + " and column: " +
+                    (column+1) + ".");
                     
                 }
             }

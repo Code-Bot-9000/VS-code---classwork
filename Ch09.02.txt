@@ -1,0 +1,54 @@
+start
+	Declarations
+		num ROW = 10  //holds the 10 words
+		num COLUMN = 11   //holds the max numbers of characters that the biggest word on the array has
+		num word, tries, total = 0, average
+		//black space is a "space" character
+		char wordArray[ROW][COLUMN] = {'T','H','I','S',' ',' ',' ',' ',' ',' '},   //word 1
+									  {'I','S',' ',' ',' ',' ',' ',' ',' ',' '},   //word 2
+									  {'A',' ',' ',' ',' ',' ',' ',' ',' ',' '},   //word 3
+									  {'T','E','N',' ',' ',' ',' ',' ',' ',' '},   //etc...
+									  {'L','E','T','T','E','R',' ',' ',' ',' '},
+									  {'S','E','N','T','E','N','C','E',' ',' '},
+									  {'M','A','D','E',' ',' ',' ',' ',' ',' '},
+									  {'U','P',' ',' ',' ',' ',' ',' ',' ',' '},
+									  {'O','F',' ',' ',' ',' ',' ',' ',' ',' '},
+									  {'C','H','A','R','A','C','T','E','R','S'}
+		num SIZE = 10							  
+		num guesses[SIZE] = 0,0,0,0,0,0,0,0,0,0  //this array stores the amount of tries that it took to guess a word
+	for word = 0 to (SIZE - 1) step 1
+		tries = playGame(word, wordArray)
+		guesses[word] = tries   //stores the number of tries for every word
+	endfor
+	for word = 0 to (SIZE - 1) step 1
+		output guesses[word]   //outputs the guesses required for each word
+		total = total + guesses
+	endfor
+	average = total/SIZE
+	output average
+stop
+
+//this method allows the user to guess letters continually until the game is solved
+//The method returns the number of guesses it took to complete the word
+playGame(num word, char wordArray)
+	Declarations
+		num tries, count2
+		char guess
+		boolean complete = false
+		char matches[11] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}   //this array will hold the correct letter guesses
+	//this array is to pass all the words through a method
+	while(complete == false)
+		output "Guess a letter >> "
+		input guess
+		tries++
+		for count2 = 0 to (10) step 1   //this loop goes through all the columns (letters)
+			//checks to see if the guess matches a specific letter
+			if(guess == wordArray[word][count2]) then   //word variable is passed from the main method and represents the row (word)
+				matches[count2] = guess
+			endif
+		endfor
+		if(matches == wordArray) then
+			complete = true	
+		endif
+	endwhile
+return tries
