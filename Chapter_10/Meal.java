@@ -2,18 +2,18 @@ package Chapter_10;
 
 public class Meal {
     //public static Object adultMeal;
-    private String mainDish;
+    private String dish;
     private String dessert;
     private String drink;
 
-    Meal(String mainDish, String dessert, String drink){
-        this.setDish(mainDish);
+    Meal(String dish, String dessert, String drink){
+        this.setDish(dish);
         this.setDessert(dessert);
         this.setDrink(drink);
     }
 
-    private void setDish(String mainDish) {
-        this.mainDish = mainDish;
+    private void setDish(String dish) {
+        this.dish = dish;
     }
 
     private void setDessert(String dessert) {
@@ -24,7 +24,7 @@ public class Meal {
         this.drink = drink;
     }
     public String getDish(){
-        return this.mainDish;
+        return this.dish;
     }
     public String getDessert(){
         return this.dessert;
