@@ -5,6 +5,7 @@ public class Menu {
         Meal adultMeal = new Meal("Steak", "Cake", "Champagne");
         Meal alternativeMeal = new Meal("Soup","Jello","Coke");
         Meal kidsMeal = new Meal("Hamburger", "Icecream", "Juice");
+        MealSize meal1 = new MealSize("Steak", "Cake", "Champagne","Large");
         
         System.out.println("Adult meal has "+adultMeal.getDish()+", "+adultMeal.getDessert()+", and "+adultMeal.getDrink());
         MealCost.adultCost();
