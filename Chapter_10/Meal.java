@@ -12,15 +12,15 @@ public class Meal {
         this.setDrink(drink);
     }
 
-    private void setDish(String dish) {
+    public void setDish(String dish) {
         this.dish = dish;
     }
 
-    private void setDessert(String dessert) {
+    public void setDessert(String dessert) {
         this.dessert = dessert;
     }
 
-    private void setDrink(String drink) {
+    public void setDrink(String drink) {
         this.drink = drink;
     }
     public String getDish(){
@@ -31,5 +31,8 @@ public class Meal {
     }
     public String getDrink(){
         return this.drink;
+    }
+    public String toString(){
+        return "Dish " +dish+ " dessert " +dessert+ " drink " +drink;
     }
 }

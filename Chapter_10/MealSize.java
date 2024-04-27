@@ -9,7 +9,4 @@ public class MealSize extends Meal{
         super(dish, dessert, drink);
         this.size = size;
     }
-    public String toString(){
-        return "Dish " +dish+ " dessert " +dessert+ " drink " +drink;
-    }
 }

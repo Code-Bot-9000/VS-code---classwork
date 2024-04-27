@@ -13,5 +13,7 @@ public class Menu {
         MealCost.alternativeMealCost();
         System.out.println("Kids meal has "+kidsMeal.getDish()+", "+kidsMeal.getDessert()+", and "+kidsMeal.getDrink());
         MealCost.kidsMealCost();
+
+        System.out.println(meal1);
     }
 }
